@@ -18,7 +18,10 @@
     </dd>
     <dt><?php echo $this->translate('Stack trace') ?>:</dt>
     <dd>
-        <pre class="prettyprint linenums"><?php echo $this->escapeHtml($this->exception->getTraceAsString()) ?></pre>
+        <pre class="prettyprint linenums" style="font-size: 12px !important;"><?php echo $this->escapeHtml($this->exception->getTraceAsString()) 
+		//var_dump($this->exception); ?>
+		</pre>
+		
     </dd>
 </dl>
 <?php
@@ -43,7 +46,7 @@
             </dd>
             <dt><?php echo $this->translate('Stack trace') ?>:</dt>
             <dd>
-                <pre class="prettyprint linenums"><?php echo $this->escapeHtml($e->getTraceAsString()) ?></pre>
+                <pre class="prettyprint linenums" ><?php echo $this->escapeHtml($e->getTraceAsString()) ?></pre>
             </dd>
         </dl>
     </li>
