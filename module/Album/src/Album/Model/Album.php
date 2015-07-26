@@ -11,12 +11,15 @@ class Album implements InputFilterAwareInterface {
     public $id;
     public $artist;
     public $title;
+    public $profile;
+    
     protected $inputFilter;
 
     public function exchangeArray($data) {
         $this->id = (!empty($data['id'])) ? $data['id'] : null;
         $this->artist = (!empty($data['artist'])) ? $data['artist'] : null;
         $this->title = (!empty($data['title'])) ? $data['title'] : null;
+        $this->profile = (!empty($data['profile'])) ? $data['profile'] : null;
     }
     
     public function getArrayCopy() {
